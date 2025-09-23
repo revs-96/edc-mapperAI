@@ -2,9 +2,13 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from mapping_utils import parse_odm_file, parse_view_mapping_file, build_training_dataset
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 def train_model(odm_path, viewmap_path):
+    logger.info("Starting training process")
     odm_mappings = parse_odm_file(odm_path)
     view_mappings = parse_view_mapping_file(viewmap_path)
 
@@ -12,7 +16,12 @@ def train_model(odm_path, viewmap_path):
     train_df = pd.DataFrame(training_records)
 
     if train_df.empty:
-        raise ValueError("No matching mappings found between ODM and ViewMapping data")
+        message = "No matching mappings found between ODM and ViewMapping data"
+        logger.error(message)
+        raise ValueError(message)
+
+    logger.debug("Training DataFrame shape: %s", train_df.shape)
+    logger.debug("Training DataFrame sample:\n%s", train_df.head())
 
     # Features and targets
     X = train_df[['StudyEventOID', 'ItemOID']]
@@ -40,6 +49,8 @@ def train_model(odm_path, viewmap_path):
     model_visit.fit(X_encoded, y_visit_encoded)
     model_attr.fit(X_encoded, y_attr_encoded)
 
+    logger.info("Training completed successfully.")
+
     trained_model = {
         "model_visit": model_visit,
         "model_attr": model_attr,
@@ -52,6 +63,7 @@ def train_model(odm_path, viewmap_path):
 
 
 def predict_mappings(trained_model, odm_test_path):
+    logger.info(f"Predicting mappings for: {odm_test_path}")
     odm_mappings = parse_odm_file(odm_test_path)
     df = pd.DataFrame(odm_mappings)
 
@@ -60,6 +72,7 @@ def predict_mappings(trained_model, odm_test_path):
 
     df_valid = df[df['StudyEventOID'].isin(known_study) & df['ItemOID'].isin(known_item)]
     if df_valid.empty:
+        logger.warning("No valid StudyEventOID and ItemOID in test data for prediction.")
         return []
 
     X_test = pd.DataFrame({
@@ -77,11 +90,12 @@ def predict_mappings(trained_model, odm_test_path):
     for i in range(len(df_valid)):
         row = df_valid.iloc[i]
         predictions.append({
-            "SubjectKey": row["SubjectKey"],
+            "SubjectKey": row.get("SubjectKey"),
             "StudyEventOID": row["StudyEventOID"],
             "StudyEventRepeatKey": row.get("StudyEventRepeatKey"),
             "ItemOID": row["ItemOID"],
             "IMPACTVisitID": pred_visit[i],
             "IMPACTAttributeID": pred_attr[i],
         })
+    logger.info(f"Prediction generated {len(predictions)} records")
     return predictions
