@@ -1,0 +1,282 @@
+<ODM xmlns="*********" xmlns:ns2="#################"
+    Originator="@@@@@@@@@@@" SourceSystemVersion="1.0.3" Id="1072">
+    <AdminData>
+        <Location OID="ABC101-101_1100" Name="ABC101-101_1100" Mnemonic="ABC101-101_001101-101_1100"
+            LocationType="Site" />
+        <Location OID="ABC101-101_1118" Name="ABC101-101_1118" Mnemonic="ABC101-101_1118"
+            LocationType="Site" />
+    </AdminData>
+    <ClinicalData StudyOID="ABC101-101">            
+        <SubjectData SubjectKey="085dfe46-56e3-41da-a736-490d97a5e64d">
+            <SiteRef LocationOID="Ryz101-101_1100" />            
+            <StudyEventData StudyEventOID="W1D1" StudyEventRepeatKey="W1D1[1]" StudyEventIndex="1"
+                TransactionType="Upsert">
+                <FormData FormOID="LBURI" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="LBURI" TransactionType="Upsert">
+                        <ItemData Value="negative" ItemOID="LBURI.LBBIL" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBURI.LBPERF" TransactionType="Upsert" />
+                        <ItemData Value="negative" ItemOID="LBURI.LBPRO" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBURI.LBMETHOD" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBURI.LBCAST" TransactionType="Upsert" />
+                        <ItemData Value="13:31" ItemOID="LBURI.LBTIM" TransactionType="Upsert" />
+                        <ItemData Value="negative" ItemOID="LBURI.LBUGL" TransactionType="Upsert" />
+                        <ItemData Value="negative" ItemOID="LBURI.LBKET" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBURI.LBLEU" TransactionType="Upsert" />
+                        <ItemData Value="1.008" ItemOID="LBURI.LBSG" TransactionType="Upsert" />
+                        <ItemData Value="6.5" ItemOID="LBURI.LBPH" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBURI.LBRBC" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="LBURI.LBDAT" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="LBCHE" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="LBCHE" TransactionType="Upsert">
+                        <ItemData Value="28 JUL 2025" ItemOID="LBCHE.LBDAT" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBCHE.LBPERF" TransactionType="Upsert" />
+                        <ItemData Value="13:31" ItemOID="LBCHE.LBTIM" TransactionType="Upsert" />
+                        <ItemData Value="4.3" ItemOID="LBCHE.LBALB" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBCHE.LBIBIL" TransactionType="Upsert" />
+                        <ItemData Value="9.2" ItemOID="LBCHE.LBCA" TransactionType="Upsert" />
+                        <ItemData Value="235" ItemOID="LBCHE.LBLDH" TransactionType="Upsert" />
+                        <ItemData Value="192" ItemOID="LBCHE.LBGLU" TransactionType="Upsert" />
+                        <ItemData Value="1.21" ItemOID="LBCHE.LBSCR" TransactionType="Upsert" />
+                        <ItemData Value="30" ItemOID="LBCHE.LBAST" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBCHE.LBUREA" TransactionType="Upsert" />
+                        <ItemData Value="138" ItemOID="LBCHE.LBNA" TransactionType="Upsert" />
+                        <ItemData Value="13" ItemOID="LBCHE.LBBUN" TransactionType="Upsert" />
+                        <ItemData Value="150" ItemOID="LBCHE.LBALP" TransactionType="Upsert" />
+                        <ItemData Value="3.4" ItemOID="LBCHE.LBK" TransactionType="Upsert" />
+                        <ItemData Value="11.0" ItemOID="LBCHE.LBUA" TransactionType="Upsert" />
+                        <ItemData Value="30" ItemOID="LBCHE.LBALT" TransactionType="Upsert" />
+                        <ItemData Value="7.2" ItemOID="LBCHE.LBTP" TransactionType="Upsert" />
+                        <ItemData Value="65.6" ItemOID="LBCHE.LBCKDE" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="LBCHE.LBFAST" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBCHE.LBLIP" TransactionType="Upsert" />
+                        <ItemData Value="0.4" ItemOID="LBCHE.LBTBIL" TransactionType="Upsert" />
+                        <ItemData Value="80" ItemOID="LBCHE.LBCRCL" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBCHE.LBAMY" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="LBHEM" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="LBHEM" TransactionType="Upsert">
+                        <ItemData Value="30" ItemOID="LBHEM.LBLYL" TransactionType="Upsert" />
+                        <ItemData Value="12.9" ItemOID="LBHEM.LBHGB" TransactionType="Upsert" />
+                        <ItemData Value="3.37" ItemOID="LBHEM.LBLYM" TransactionType="Upsert" />
+                        <ItemData Value="6.86" ItemOID="LBHEM.LBANC" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="LBHEM.LBDAT" TransactionType="Upsert" />
+                        <ItemData Value="246" ItemOID="LBHEM.LBPLT" TransactionType="Upsert" />
+                        <ItemData Value="13:31" ItemOID="LBHEM.LBTIM" TransactionType="Upsert" />
+                        <ItemData Value="11.36" ItemOID="LBHEM.LBWBC" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBHEM.LBPERF" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBHEM.LBEOL" TransactionType="Upsert" />
+                        <ItemData Value="8" ItemOID="LBHEM.LBMOL" TransactionType="Upsert" />
+                        <ItemData Value="0.09" ItemOID="LBHEM.LBEOS" TransactionType="Upsert" />
+                        <ItemData Value="0.87" ItemOID="LBHEM.LBMON" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBHEM.LBBAL" TransactionType="Upsert" />
+                        <ItemData Value="0.09" ItemOID="LBHEM.LBBAS" TransactionType="Upsert" />
+                        <ItemData Value="59" ItemOID="LBHEM.LBNEL" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="SV" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="SV" TransactionType="Upsert">
+                        <ItemData Value="28 JUL 2025" ItemOID="SV.SVDAT" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="SV.SVYN" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="EX1" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="EX1" TransactionType="Upsert">
+                        <ItemData Value="2" ItemOID="EX1.EXDOSADJ" TransactionType="Upsert" />
+                        <ItemData Value="10.2" ItemOID="EX1.EXPDOSE" TransactionType="Upsert" />
+                        <ItemData Value="11:45" ItemOID="EX1.EXENTIM" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX1.EXPEIP" TransactionType="Upsert" />
+                        <ItemData Value="11:15" ItemOID="EX1.EXSTTIM" TransactionType="Upsert" />
+                        <ItemData Value="INTRAVENOUS" ItemOID="EX1.EXROUTE" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="EX1.EXENDAT" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="EX1.EXSTDAT" TransactionType="Upsert" />
+                        <ItemData Value="RYZ101" ItemOID="EX1.EXTRT" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX1.EXDELAY" TransactionType="Upsert" />
+                        <ItemData Value="05 AUG 2025" ItemOID="EX1.EXVIADAT"
+                            TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX1.EXITRPYN" TransactionType="Upsert" />
+                        <ItemData Value="L0099" ItemOID="EX1.EXKITNUM" TransactionType="Upsert" />
+                        <ItemData Value="10.3" ItemOID="EX1.EXADOSE" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX1.EXYN2" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX1.EXMETHOD" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX1.EXLOC" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="EX2" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="EX2" TransactionType="Upsert">
+                        <ItemData Value="1" ItemOID="EX2.EXYN2" TransactionType="Upsert" />
+                        <ItemData Value="INTRAVENOUS" ItemOID="EX2.EXROUTE1"
+                            TransactionType="Upsert" />
+                        <ItemData Value="17:11" ItemOID="EX2.EXENTIM1" TransactionType="Upsert" />
+                        <ItemData Value="16:10" ItemOID="EX2.EXSTTIM1" TransactionType="Upsert" />
+                        <ItemData Value="1200" ItemOID="EX2.EXPDOSE1" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX2.EXSTDAT1"
+                            TransactionType="Upsert" />
+                        <ItemData Value="PD-L1 INHIBITOR" ItemOID="EX2.EXTRT1"
+                            TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX2.EXENDAT1"
+                            TransactionType="Upsert" />
+                        <ItemData Value="1200" ItemOID="EX2.EXADOSE1" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX2.EXDOSADJ" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX2.EXDELAY" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="VS" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="VS" TransactionType="Upsert">
+                        <ItemData Value="28 JUL 2025" ItemOID="VS.VSDAT" TransactionType="Upsert" />
+                        <ItemData Value="13:25" ItemOID="VS.VSTIM" TransactionType="Upsert" />
+                        <ItemData Value="98.1" ItemOID="VS.TEMP" TransactionType="Upsert" />
+                        <ItemData Value="126" ItemOID="VS.SYSBP" TransactionType="Upsert" />
+                        <ItemData Value="78" ItemOID="VS.DIABP" TransactionType="Upsert" />
+                        <ItemData Value="88" ItemOID="VS.PULSE" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="VS.VSPERF" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="DS4" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="DS4" TransactionType="Upsert">
+                        <ItemData Value="1" ItemOID="DS4.DSCONT" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="PE1" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="PE1" TransactionType="Upsert">
+                        <ItemData Value="1" ItemOID="PE1.PEPERF1" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="PE1.PEDAT" TransactionType="Upsert" />
+                        <ItemData Value="183" ItemOID="PE1.WEIGHT" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="10"
+                        TransactionType="Upsert">
+                        <ItemData Value="2" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="11"
+                        TransactionType="Upsert">
+                        <ItemData Value="13" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="12"
+                        TransactionType="Upsert">
+                        <ItemData Value="psychiatric" ItemOID="PE1.PETSTOTH"
+                            TransactionType="Upsert" />
+                        <ItemData Value="99" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="5"
+                        TransactionType="Upsert">
+                        <ItemData Value="7" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="6"
+                        TransactionType="Upsert">
+                        <ItemData Value="6" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="7"
+                        TransactionType="Upsert">
+                        <ItemData Value="8" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="8"
+                        TransactionType="Upsert">
+                        <ItemData Value="11" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="9"
+                        TransactionType="Upsert">
+                        <ItemData Value="9" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="1"
+                        TransactionType="Upsert">
+                        <ItemData Value="1" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="2"
+                        TransactionType="Upsert">
+                        <ItemData Value="4" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="3"
+                        TransactionType="Upsert">
+                        <ItemData Value="5" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                    <ItemGroupData ItemGroupOID="PE1_LOG_LINE" ItemGroupRepeatKey="4"
+                        TransactionType="Upsert">
+                        <ItemData Value="3" ItemOID="PE1.PETEST2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="PE1.PERES1" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="ECOG" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="ECOG" TransactionType="Upsert">
+                        <ItemData Value="2" ItemOID="ECOG.ECOGRES" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="ECOG.ECOGDAT" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="ECOG.ECOGPERF" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="EX" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="EX" TransactionType="Upsert">
+                        <ItemData
+                            Value="not available; pre-mix is pulled from site pyxis so lot number is not logged."
+                            ItemOID="EX.EXLNUM" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="EX.EXSTDAT" TransactionType="Upsert" />
+                        <ItemData Value="14:45" ItemOID="EX.EXENTIM" TransactionType="Upsert" />
+                        <ItemData Value="1000" ItemOID="EX.EXTOTAL" TransactionType="Upsert" />
+                        <ItemData Value="10:45" ItemOID="EX.EXSTTIM" TransactionType="Upsert" />
+                        <ItemData Value="4 AUG 2025" ItemOID="EX.EXENDAT" TransactionType="Upsert" />
+                        <ItemData Value="25" ItemOID="EX.EXLHDOSE" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX.EXYN1" TransactionType="Upsert" />
+                        <ItemData Value="25" ItemOID="EX.EXAHDOSE" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="LBTFT" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="LBTFT" TransactionType="Upsert">
+                        <ItemData Value="ND" ItemOID="LBTFT.LBFT4" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="LBTFT.LBDAT" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="LBTFT.LBPERF" TransactionType="Upsert" />
+                        <ItemData Value="13:31" ItemOID="LBTFT.LBTIM" TransactionType="Upsert" />
+                        <ItemData Value="ND" ItemOID="LBTFT.LBFT3" TransactionType="Upsert" />
+                        <ItemData Value="1.32" ItemOID="LBTFT.LBTSH" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="EX3" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="EX3" TransactionType="Upsert">
+                        <ItemData Value="1" ItemOID="EX3.EXTRT2" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX3.EXYN2" TransactionType="Upsert" />
+                        <ItemData Value="460" ItemOID="EX3.EXADOSE1" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX3.EXDELAY" TransactionType="Upsert" />
+                        <ItemData Value="17:15" ItemOID="EX3.EXSTTIM" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX3.EXENDAT" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX3.EXSTDAT" TransactionType="Upsert" />
+                        <ItemData Value="5" ItemOID="EX3.EXPAUC" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX3.EXPDOSU1" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX3.EXADOSU1" TransactionType="Upsert" />
+                        <ItemData Value="460" ItemOID="EX3.EXPDOSE1" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX3.EXDOSADJ" TransactionType="Upsert" />
+                        <ItemData Value="INTRAVENOUS" ItemOID="EX3.EXROUTE2"
+                            TransactionType="Upsert" />
+                        <ItemData Value="17:47" ItemOID="EX3.EXENTIM" TransactionType="Upsert" />
+                        <ItemData Value="5" ItemOID="EX3.EXAAUC" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+                <FormData FormOID="EX4" FormRepeatKey="1">
+                    <ItemGroupData ItemGroupOID="EX4" TransactionType="Upsert">
+                        <ItemData Value="INTRAVENOUS" ItemOID="EX4.EXROUTE3"
+                            TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX4.EXSTDAT" TransactionType="Upsert" />
+                        <ItemData Value="17:55" ItemOID="EX4.EXSTTIM" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX4.EXDOSADJ" TransactionType="Upsert" />
+                        <ItemData Value="1" ItemOID="EX4.EXYN2" TransactionType="Upsert" />
+                        <ItemData Value="100" ItemOID="EX4.EXADOSE2" TransactionType="Upsert" />
+                        <ItemData Value="28 JUL 2025" ItemOID="EX4.EXENDAT" TransactionType="Upsert" />
+                        <ItemData Value="18:57" ItemOID="EX4.EXENTIM" TransactionType="Upsert" />
+                        <ItemData Value="ETOPOSIDE" ItemOID="EX4.EXTRT3" TransactionType="Upsert" />
+                        <ItemData Value="100" ItemOID="EX4.EXPDOSE2" TransactionType="Upsert" />
+                        <ItemData Value="2" ItemOID="EX4.EXDELAY" TransactionType="Upsert" />
+                    </ItemGroupData>
+                </FormData>
+            </StudyEventData>
+        </SubjectData>
+    </ClinicalData>
+</ODM>
