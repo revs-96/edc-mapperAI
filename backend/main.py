@@ -3,11 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from model import train_model, predict_mappings
 import shutil
 import os
-import traceback
-import logging
-from fastapi.responses import JSONResponse
 import xml.etree.ElementTree as ET
-
+from fastapi.responses import JSONResponse
+import logging
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -26,7 +24,6 @@ UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 global_model = None
 
-
 @app.post("/train/")
 async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
     odm_path = os.path.join(UPLOAD_FOLDER, odm.filename)
@@ -40,12 +37,12 @@ async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
     try:
         global_model = train_model(odm_path, viewmap_path)
     except ET.ParseError as e:
-        # Extract line and column if available
         line = getattr(e, 'position', ('Unknown', 'Unknown'))[0]
         col = getattr(e, 'position', ('Unknown', 'Unknown'))[1]
         message = f"XML Parsing Error at line {line}, column {col}: {str(e)}"
         return JSONResponse(status_code=400, content={"error": message})
     except Exception as e:
+        logger.exception("Training failed")
         return JSONResponse(status_code=500, content={"error": str(e)})
     return {"status": "trained"}
 
@@ -54,6 +51,7 @@ async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
 async def predict(testodm: UploadFile = File(...)):
     if global_model is None:
         return JSONResponse(status_code=400, content={"error": "Model not trained."})
+
     test_path = os.path.join(UPLOAD_FOLDER, testodm.filename)
     with open(test_path, "wb") as f:
         shutil.copyfileobj(testodm.file, f)
@@ -66,5 +64,16 @@ async def predict(testodm: UploadFile = File(...)):
         message = f"XML Parsing Error at line {line}, column {col}: {str(e)}"
         return JSONResponse(status_code=400, content={"error": message})
     except Exception as e:
+        logger.exception("Prediction failed")
         return JSONResponse(status_code=500, content={"error": str(e)})
-    return {"mappings": result}
+
+    # Return filtered output: only StudyEventOID, ItemOID, IMPACTVisitID for each mapping
+    filtered_mappings = [
+        {
+            "StudyEventOID": item["StudyEventOID"],
+            "ItemOID": item["ItemOID"],
+            "IMPACTVisitID": item["IMPACTVisitID"],
+        } for item in result
+    ]
+
+    return {"mappings": filtered_mappings}

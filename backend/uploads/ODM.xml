@@ -9,7 +9,7 @@
     <ClinicalData StudyOID="ABC101-101">
         <SubjectData SubjectKey="5328838a-53c1-4983-bd4b-2813f6cf1622">
             <SiteRef LocationOID="ABC101-101_1100" />
-            <StudyEventData StudyEventOID="SUBJECT" xdbzdfbzdfb StudyEventIndex="1">
+            <StudyEventData StudyEventOID="SUBJECT" StudyEventIndex="1">
                 <FormData FormOID="SUBJ" Fy="1" TransactionType="Upsert">
                     <ItemGroupData ItemGroupOID="SUBJ" TransactionType="Upsert">
                         <ItemData Value="001" ItemOID="SUBJ.SUBJNUM" TransactionType="Upsert" />

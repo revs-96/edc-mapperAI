@@ -87,15 +87,16 @@ def predict_mappings(trained_model, odm_test_path):
     pred_attr = trained_model['le_impact_attr'].inverse_transform(y_attr_pred)
 
     predictions = []
+    seen = set()
     for i in range(len(df_valid)):
         row = df_valid.iloc[i]
-        predictions.append({
-            "SubjectKey": row.get("SubjectKey"),
-            "StudyEventOID": row["StudyEventOID"],
-            "StudyEventRepeatKey": row.get("StudyEventRepeatKey"),
-            "ItemOID": row["ItemOID"],
-            "IMPACTVisitID": pred_visit[i],
-            "IMPACTAttributeID": pred_attr[i],
-        })
-    logger.info(f"Prediction generated {len(predictions)} records")
+        key = (row["StudyEventOID"], row["ItemOID"], pred_visit[i])
+        if key not in seen:
+            seen.add(key)
+            predictions.append({
+                "StudyEventOID": row["StudyEventOID"],
+                "ItemOID": row["ItemOID"],
+                "IMPACTVisitID": pred_visit[i],
+            })
+    logger.info(f"Prediction generated {len(predictions)} unique records")
     return predictions
