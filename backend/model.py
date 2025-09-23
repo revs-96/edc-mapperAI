@@ -23,12 +23,10 @@ def train_model(odm_path, viewmap_path):
     logger.debug("Training DataFrame shape: %s", train_df.shape)
     logger.debug("Training DataFrame sample:\n%s", train_df.head())
 
-    # Features and targets
     X = train_df[['StudyEventOID', 'ItemOID']]
     y_visit = train_df['IMPACTVisitID']
     y_attr = train_df['IMPACTAttributeID']
 
-    # Label encoders for categorical variables
     le_studyevent = LabelEncoder()
     le_item = LabelEncoder()
     le_impact_visit = LabelEncoder()
@@ -42,7 +40,6 @@ def train_model(odm_path, viewmap_path):
     y_visit_encoded = le_impact_visit.fit_transform(y_visit)
     y_attr_encoded = le_impact_attr.fit_transform(y_attr)
 
-    # Train classifiers
     model_visit = RandomForestClassifier(n_estimators=100, random_state=42)
     model_attr = RandomForestClassifier(n_estimators=100, random_state=42)
 
@@ -51,6 +48,10 @@ def train_model(odm_path, viewmap_path):
 
     logger.info("Training completed successfully.")
 
+    valid_mappings_lookup = set()
+    for vm in view_mappings:
+        valid_mappings_lookup.add((vm["EDCVisitID"], vm["EDCAttributeID"]))
+
     trained_model = {
         "model_visit": model_visit,
         "model_attr": model_attr,
@@ -58,9 +59,9 @@ def train_model(odm_path, viewmap_path):
         "le_item": le_item,
         "le_impact_visit": le_impact_visit,
         "le_impact_attr": le_impact_attr,
+        "valid_mappings_lookup": valid_mappings_lookup,
     }
     return trained_model
-
 
 def predict_mappings(trained_model, odm_test_path):
     logger.info(f"Predicting mappings for: {odm_test_path}")
@@ -100,3 +101,22 @@ def predict_mappings(trained_model, odm_test_path):
             })
     logger.info(f"Prediction generated {len(predictions)} unique records")
     return predictions
+
+def validate_view_mapping(trained_model, user_viewmap_path):
+    user_mappings = parse_view_mapping_file(user_viewmap_path)
+    valid_lookup = trained_model.get("valid_mappings_lookup", set())
+
+    results = []
+
+    for mapping in user_mappings:
+        edc_visit = mapping["EDCVisitID"]
+        edc_attr = mapping["EDCAttributeID"]
+        is_valid = (edc_visit, edc_attr) in valid_lookup
+        results.append({
+            "IMPACTVisitID": mapping["IMPACTVisitID"],
+            "EDCVisitID": edc_visit,
+            "IMPACTAttributeID": mapping.get("IMPACTAttributeID"),
+            "EDCAttributeID": edc_attr,
+            "valid": is_valid
+        })
+    return results

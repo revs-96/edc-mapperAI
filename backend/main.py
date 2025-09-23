@@ -1,6 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from model import train_model, predict_mappings
+from model import train_model, predict_mappings, validate_view_mapping
 import shutil
 import os
 import xml.etree.ElementTree as ET
@@ -23,6 +23,7 @@ app.add_middleware(
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 global_model = None
+
 
 @app.post("/train/")
 async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
@@ -67,7 +68,6 @@ async def predict(testodm: UploadFile = File(...)):
         logger.exception("Prediction failed")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
-    # Return filtered output: only StudyEventOID, ItemOID, IMPACTVisitID for each mapping
     filtered_mappings = [
         {
             "StudyEventOID": item["StudyEventOID"],
@@ -77,3 +77,26 @@ async def predict(testodm: UploadFile = File(...)):
     ]
 
     return {"mappings": filtered_mappings}
+
+
+@app.post("/validate/")
+async def validate(user_viewmap: UploadFile = File(...)):
+    if global_model is None:
+        return JSONResponse(status_code=400, content={"error": "Model not trained."})
+
+    user_viewmap_path = os.path.join(UPLOAD_FOLDER, user_viewmap.filename)
+    with open(user_viewmap_path, "wb") as f:
+        shutil.copyfileobj(user_viewmap.file, f)
+
+    try:
+        validation_results = validate_view_mapping(global_model, user_viewmap_path)
+    except ET.ParseError as e:
+        line = getattr(e, 'position', ('Unknown', 'Unknown'))[0]
+        col = getattr(e, 'position', ('Unknown', 'Unknown'))[1]
+        message = f"XML Parsing Error at line {line}, column {col}: {str(e)}"
+        return JSONResponse(status_code=400, content={"error": message})
+    except Exception as e:
+        logger.exception("Validation failed")
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+    return {"validation": validation_results}
