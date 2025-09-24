@@ -1,4 +1,4 @@
-#Python
+# Python
 venv/
 __pycache__/
 *.pyc
@@ -6,4 +6,4 @@ __pycache__/
 # React
 node_modules/
 .env
-build/
+# DO NOT ignore build/ (needed for GitHub Pages)
