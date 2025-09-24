@@ -6,6 +6,9 @@ import os
 import xml.etree.ElementTree as ET
 from fastapi.responses import JSONResponse
 import logging
+from fastapi import Body
+from xml_updater import update_odm_xml, get_update_response
+
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -100,3 +103,37 @@ async def validate(user_viewmap: UploadFile = File(...)):
         return JSONResponse(status_code=500, content={"error": str(e)})
 
     return {"validation": validation_results}
+
+latest_odm_path = None
+corrected_mappings = []
+
+@app.post("/save_mappings/")
+async def save_mappings(
+    mappings: list[dict] = Body(...),
+    odm_filename: str = None
+):
+    global corrected_mappings, latest_odm_path
+
+    if odm_filename is None:
+        return {"error": "ODM filename required"}
+
+    odm_path = os.path.join(UPLOAD_FOLDER, odm_filename)
+    if not os.path.exists(odm_path):
+        return {"error": "ODM file not found"}
+
+    corrected_mappings = mappings
+    latest_odm_path = odm_path
+    return {"status": "mappings saved"}
+
+
+@app.get("/export_xml/")
+async def export_xml():
+    global corrected_mappings, latest_odm_path
+    if latest_odm_path is None:
+        return {"error": "No ODM file found to export"}
+
+    try:
+        xml_content = update_odm_xml(latest_odm_path, corrected_mappings)
+        return get_update_response(xml_content)
+    except Exception as e:
+        return {"error": f"Error generating updated XML: {str(e)}"}
