@@ -1,6 +1,0 @@
-fastapi
-uvicorn[standard]
-pandas
-scikit-learn
-lxml
-python-multipart
