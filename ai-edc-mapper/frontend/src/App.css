@@ -1,0 +1,101 @@
+/* App.css - colorful styles for EDC Data Mapper */
+
+/* App root */
+.app-root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #f6f8fb;
+  color: #0f1724;
+}
+
+/* Dark theme */
+.app-root.dark {
+  background: #071427;
+  color: #dbeafe;
+}
+
+/* Card analytics style */
+.analytics-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(14, 39, 75, 0.06);
+  border: 1px solid rgba(34, 102, 255, 0.06);
+}
+
+/* Stat cards */
+.stat-card {
+  border-radius: 12px;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(249,251,255,0.95));
+  box-shadow: 0 6px 16px rgba(35, 80, 141, 0.06);
+}
+
+/* Fancy tables */
+.fancy-table .ant-table-thead > tr > th {
+  background: linear-gradient(90deg, rgba(33,115,215,0.12), rgba(79,163,247,0.06));
+  color: #0b4f8a;
+  font-weight: 600;
+  border-bottom: 0;
+}
+
+.fancy-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(15,23,36,0.04);
+  padding: 14px 12px;
+}
+
+/* Zebra rows */
+.fancy-table .ant-table-tbody > tr:nth-child(odd) > td {
+  background: rgba(247,250,255,0.6);
+}
+
+/* Row highlight for errors: light red */
+.row-error > td {
+  background: #fff1f0 !important; /* Ant Design light red canvas */
+  transition: background 0.18s ease;
+}
+
+/* Small card touches */
+.card-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header gradient */
+.ant-layout-header {
+  background: linear-gradient(90deg,#2173d7,#4fa3f7) !important;
+  color: #fff;
+}
+
+/* Sidebar logo */
+.logo .ant-typography {
+  color: #1e6fbe;
+}
+
+/* Buttons */
+.ant-btn-primary {
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(33,115,215,0.12);
+}
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+  .fancy-table .ant-table-thead > tr > th, .fancy-table .ant-table-tbody > tr > td {
+    padding: 10px 6px;
+  }
+}
+
+/* Small helper */
+.no-activity {
+  text-align: center;
+  padding: 36px;
+  color: #8b96a8;
+}
+
+/* Slight card shadow for content */
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(14, 39, 75, 0.03);
+}
+
+/* Breadcrumb/Title in header */
+.ant-breadcrumb {
+  color: rgba(255,255,255,0.95);
+}

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Study xmlns:xsi="***************e" EDCStudyID="ABC101-101"
+      EDCStudyVersion="ABC101-101_001" System="Rave" IMPACTMonitoringDocCode="10.2.1"
+      IMPACTStudyID="111111" InFormAdapterURL="">
+      <VisitDesign>
+            <Visit IMPACTVisitID="SCREEN" EDCVisitID="SCREEN" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="DUMENR" EDCVisitID="W1D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W1D1" EDCVisitID="W1D1AA" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W001D2" EDCVisitID="W1D2" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDATAA" />
+            </Visit>
+            <Visit IMPACTVisitID="W001D3" EDCVisitID="W1D3" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W002D1AA" EDCVisitID="W2D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W004D1" EDCVisitID="W4D1AA" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W004D2" EDCVisitID="W4D2" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W004D3AA" EDCVisitID="W4D3" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W005D1A" EDCVisitID="W5D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W005D1D" EDCVisitID="W5D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W007D1" EDCVisitID="W7D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W007D2" EDCVisitID="W7D2" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W007D3" EDCVisitID="W7D3" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W008D1A" EDCVisitID="W8D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W008D1D" EDCVisitID="W8D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W010D1" EDCVisitID="W10D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W010D2" EDCVisitID="W10D2" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W010D3" EDCVisitID="W10D3" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W011D1A" EDCVisitID="W11D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W011D1D" EDCVisitID="W11D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W013D1A" EDCVisitID="W13D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W014D1A" EDCVisitID="W14D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W015D1D" EDCVisitID="W15D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W017D1A" EDCVisitID="W17D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W018D1A" EDCVisitID="W18D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W019D1D" EDCVisitID="W19D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W021D1A" EDCVisitID="W21D1A" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W022D1A" EDCVisitID="W22D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W023D1D" EDCVisitID="W23D1D" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W025D1A" EDCVisitID="W25D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W026D1A" EDCVisitID="W26D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W030D1A" EDCVisitID="W30D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W034D1A" EDCVisitID="W34D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W038D1A" EDCVisitID="W38D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W042D1A" EDCVisitID="W42D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W046D1A" EDCVisitID="W46D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W050D1A" EDCVisitID="W50D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W054D1A" EDCVisitID="W54D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W058D1A" EDCVisitID="W58D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W062D1A" EDCVisitID="W62D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W066D1A" EDCVisitID="W66D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W070D1A" EDCVisitID="W70D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W074D1A" EDCVisitID="W74D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W078D1A" EDCVisitID="W78D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W082D1A" EDCVisitID="W82D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W086D1A" EDCVisitID="W86D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W090D1A" EDCVisitID="W90D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W094D1A" EDCVisitID="W94D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W098D1A" EDCVisitID="W98D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W102D1A" EDCVisitID="W102D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W106D1A" EDCVisitID="W106D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W110D1A" EDCVisitID="W110D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W114D1A" EDCVisitID="W114D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W118D1A" EDCVisitID="W118D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W122D1A" EDCVisitID="W122D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W126D1A" EDCVisitID="W126D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W130D1A" EDCVisitID="W130D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W134D1A" EDCVisitID="W134D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W138D1A" EDCVisitID="W138D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W142D1A" EDCVisitID="W142D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W146D1A" EDCVisitID="W146D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W150D1A" EDCVisitID="W150D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W154D1A" EDCVisitID="W154D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W158D1A" EDCVisitID="W158D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W027D1D" EDCVisitID="W27D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W031D1D" EDCVisitID="W31D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W035D1D" EDCVisitID="W35D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W039D1D" EDCVisitID="W39D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W043D1D" EDCVisitID="W43D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W047D1D" EDCVisitID="W47D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W051D1D" EDCVisitID="W51D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W055D1D" EDCVisitID="W55D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W059D1D" EDCVisitID="W59D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W063D1D" EDCVisitID="W63D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W067D1D" EDCVisitID="W67D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W071D1D" EDCVisitID="W71D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W075D1D" EDCVisitID="W75D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W079D1D" EDCVisitID="W79D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W083D1D" EDCVisitID="W83D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W087D1D" EDCVisitID="W87D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W091D1D" EDCVisitID="W91D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W095D1D" EDCVisitID="W95D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W099D1D" EDCVisitID="W99D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W103D1D" EDCVisitID="W103D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W107D1D" EDCVisitID="W107D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W111D1D" EDCVisitID="W111D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W115D1D" EDCVisitID="W115D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W119D1D" EDCVisitID="W119D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W123D1D" EDCVisitID="W123D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W127D1D" EDCVisitID="W127D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W131D1D" EDCVisitID="W131D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W135D1D" EDCVisitID="W135D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W139D1D" EDCVisitID="W139D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W143D1D" EDCVisitID="W143D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W147D1D" EDCVisitID="W147D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W151D1D" EDCVisitID="W151D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W155D1D" EDCVisitID="W155D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="W159D1D" EDCVisitID="W159D1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:1" EDCVisitID="LTFU" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit> 
+            <Visit IMPACTVisitID="LTFU:2" EDCVisitID="LTFU1" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:3" EDCVisitID="LTFU2" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:4" EDCVisitID="LTFU3" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:5" EDCVisitID="LTFU4" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:6" EDCVisitID="LTFU5" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:7" EDCVisitID="LTFU6" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:8" EDCVisitID="LTFU7" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:9" EDCVisitID="LTFU8" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:10" EDCVisitID="LTFU9" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:11" EDCVisitID="LTFU10" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:12" EDCVisitID="LTFU11" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:13" EDCVisitID="LTFU12" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:14" EDCVisitID="LTFU13" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:15" EDCVisitID="LTFU14" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:16" EDCVisitID="LTFU15" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:17" EDCVisitID="LTFU16" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:18" EDCVisitID="LTFU17" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:19" EDCVisitID="LTFU18" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="LTFU:20" EDCVisitID="LTFU19" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="US" EDCVisitID="US" Repeating="Y">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="SV.SVDAT" />
+            </Visit>
+            <Visit IMPACTVisitID="EOT" EDCVisitID="EOT" Repeating="N">
+                  <Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="EOT.EOTDAT" />
+            </Visit>
+      </VisitDesign>
+      <SubjectAttributes>
+            <Attribute IMPACTAttributeID="UniqueNumber" EDCVisitID="SUBJECT"
+                  EDCAttributeID="SUBJ.SUBJNUM" />
+            <Attribute IMPACTAttributeID="TransferSubjectTriggerField" EDCVisitID="SUBJECT"
+                  EDCAttributeID="SUBJ.SUBJNUM" />
+            <Attribute IMPACTAttributeID="ICFDate" EDCVisitID="SCREEN" EDCAttributeID="DS.DSSTDAT" />
+      </SubjectAttributes>
+      <!--   
+      Serious Adverse Event Attributes
+      -->
+      <SAEAttributes>
+            <Attribute IMPACTAttributeID="Description" EDCVisitID="AE" EDCAttributeID="AE.AETERM" />
+            <Attribute IMPACTAttributeID="SeriousEventFlag" EDCVisitID="AE"
+                  EDCAttributeID="AE.AESER">
+                  <Value>
+                        <IMPACTValue>Y</IMPACTValue>
+                        <EDCValue>1</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>N</IMPACTValue>
+                        <EDCValue>2</EDCValue>
+                  </Value>
+            </Attribute>
+            <Attribute IMPACTAttributeID="OnsetDate" EDCVisitID="AE" EDCAttributeID="AE.AESTDAT" />
+            <Attribute IMPACTAttributeID="ResolvedDate" EDCVisitID="AE" EDCAttributeID="AE.AEENDDAT" />
+            <Attribute IMPACTAttributeID="Outcome" EDCVisitID="AE" EDCAttributeID="AE.AEOUT">
+                  <Value>
+                        <IMPACTValue>ON</IMPACTValue>
+                        <EDCValue>3</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>ON</IMPACTValue>
+                        <EDCValue>4</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RS</IMPACTValue>
+                        <EDCValue>1</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RS</IMPACTValue>
+                        <EDCValue>2</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RS</IMPACTValue>
+                        <EDCValue>5</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RS</IMPACTValue>
+                        <EDCValue>6</EDCValue>
+                  </Value>
+            </Attribute>
+            <Attribute IMPACTAttributeID="OutcomeDetail" EDCVisitID="AE" EDCAttributeID="AE.AEOUT">
+                  <Value>
+                        <IMPACTValue>DE</IMPACTValue>
+                        <EDCValue>5</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RE</IMPACTValue>
+                        <EDCValue>1</EDCValue>
+                  </Value>
+                  <Value>
+                        <IMPACTValue>RS</IMPACTValue>
+                        <EDCValue>2</EDCValue>
+                  </Value>
+            </Attribute>
+      </SAEAttributes>
+</Study>
