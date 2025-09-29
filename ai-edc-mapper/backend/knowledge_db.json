@@ -1,0 +1,40 @@
+{
+  "models": [
+    {
+      "version": 1,
+      "trained_at": "2025-09-29T05:56:19.251012",
+      "odm_filename": "ODM.xml",
+      "viewmap_filename": "ViewMapping.xml",
+      "model_path": "models\\model_v1.pkl",
+      "train_samples": 75,
+      "mappings_count": 121,
+      "accuracy_estimate": 93.33,
+      "notes": "RandomForest-based mapping model"
+    }
+  ],
+  "activities": [
+    {
+      "time": "2025-09-29T06:28:04.740783",
+      "type": "predict",
+      "message": "Predicted mappings for ODM.xml (27 rows)"
+    },
+    {
+      "time": "2025-09-29T06:18:38.228036",
+      "type": "predict",
+      "message": "Predicted mappings for ODM.xml (27 rows)"
+    },
+    {
+      "time": "2025-09-29T05:56:29.308732",
+      "type": "predict",
+      "message": "Predicted mappings for Level1ODM.xml (1 rows)"
+    },
+    {
+      "time": "2025-09-29T05:56:19.251012",
+      "type": "train",
+      "message": "Trained model v1 from ODM.xml"
+    }
+  ],
+  "mappings_total": 0,
+  "last_export": null,
+  "user_corrected": []
+}

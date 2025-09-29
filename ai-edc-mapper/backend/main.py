@@ -1,9 +1,9 @@
-# main.py
 from fastapi import FastAPI, UploadFile, File, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from model import train_model, predict_mappings, validate_view_mapping, load_model, save_model
 from xml_updater import update_odm_xml, get_update_response
+from knowledgebase import add_user_mapping, get_all_user_mappings
 
 import shutil
 import os
@@ -25,49 +25,39 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# folders and persistence files
 UPLOAD_FOLDER = "uploads"
 MODELS_DIR = "models"
-KNOWLEDGE_DB = "knowledge_db.json"
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
 
-
-def _load_db():
-    if os.path.exists(KNOWLEDGE_DB):
-        try:
-            with open(KNOWLEDGE_DB, "r", encoding="utf-8") as fh:
-                return json.load(fh)
-        except Exception:
-            logger.exception("Failed to load knowledge DB, creating new.")
-    # default structure
-    return {
-        "models": [],        # list of model metadata entries
-        "activities": [],    # chronological activities (newest first)
-        "mappings_total": 0,
-        "last_export": None
-    }
-
-
-def _save_db(db):
-    try:
-        with open(KNOWLEDGE_DB, "w", encoding="utf-8") as fh:
-            json.dump(db, fh, indent=2, default=str)
-    except Exception:
-        logger.exception("Failed to save knowledge DB")
-
-
-# Globals used by endpoints
 global_model = None
 latest_odm_path = None
 corrected_mappings = []
 
+def _load_db():
+    if os.path.exists("knowledge_db.json"):
+        try:
+            with open("knowledge_db.json", "r", encoding="utf-8") as fh:
+                return json.load(fh)
+        except Exception:
+            logger.exception("Failed to load knowledge DB, creating new.")
+    return {
+        "models": [],       
+        "activities": [],   
+        "mappings_total": 0,
+        "last_export": None,
+        "user_corrected": []
+    }
+
+def _save_db(db):
+    try:
+        with open("knowledge_db.json", "w", encoding="utf-8") as fh:
+            json.dump(db, fh, indent=2, default=str)
+    except Exception:
+        logger.exception("Failed to save knowledge DB")
 
 def ensure_model_loaded():
-    """
-    Load latest model from knowledge DB (if any) into global_model.
-    """
     global global_model
     db = _load_db()
     if db["models"]:
@@ -82,10 +72,7 @@ def ensure_model_loaded():
                 logger.exception("Failed to load saved model")
     global_model = None
 
-
-# attempt to load model at startup if available
 ensure_model_loaded()
-
 
 @app.get("/model_status/")
 async def model_status():
@@ -97,21 +84,11 @@ async def model_status():
         "latest_model": latest
     }
 
-
 @app.post("/train/")
 async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
-    """
-    Train a model from uploaded ODM and ViewMapping xmls.
-    This will:
-      - save uploaded files to uploads/
-      - run training (model.train_model)
-      - persist the model file into models/
-      - record metadata into knowledge_db.json
-    """
     odm_path = os.path.join(UPLOAD_FOLDER, odm.filename)
     viewmap_path = os.path.join(UPLOAD_FOLDER, viewmap.filename)
 
-    # save uploaded files
     with open(odm_path, "wb") as f:
         shutil.copyfileobj(odm.file, f)
     with open(viewmap_path, "wb") as f:
@@ -129,7 +106,6 @@ async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
         logger.exception("Training failed")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
-    # persist model file and register metadata in knowledge DB
     db = _load_db()
     version = len(db["models"]) + 1
     model_filename = f"model_v{version}.pkl"
@@ -141,7 +117,6 @@ async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
         logger.exception("Failed to save trained model")
         return JSONResponse(status_code=500, content={"error": "Failed to save trained model"})
 
-    # assemble metadata (train_model sets trained_model['metadata'])
     metadata = trained_model.get("metadata", {})
     metadata_entry = {
         "version": version,
@@ -163,11 +138,9 @@ async def train(odm: UploadFile = File(...), viewmap: UploadFile = File(...)):
     })
     _save_db(db)
 
-    # set loaded model in memory
     global_model = trained_model
 
     return {"status": "trained", "version": version, "metadata": metadata_entry}
-
 
 @app.post("/predict/")
 async def predict(testodm: UploadFile = File(...)):
@@ -180,7 +153,14 @@ async def predict(testodm: UploadFile = File(...)):
         shutil.copyfileobj(testodm.file, f)
 
     try:
+        odm_mappings = None
+        from mapping_utils import parse_odm_file
+        odm_mappings = parse_odm_file(test_path)
+
         result = predict_mappings(global_model, test_path)
+
+        mapped_keys = set((item["StudyEventOID"], item["ItemOID"]) for item in result)
+        unmapped = [entry for entry in odm_mappings if (entry["StudyEventOID"], entry["ItemOID"]) not in mapped_keys]
     except ET.ParseError as e:
         line = getattr(e, "position", ("Unknown", "Unknown"))[0]
         col = getattr(e, "position", ("Unknown", "Unknown"))[1]
@@ -190,7 +170,6 @@ async def predict(testodm: UploadFile = File(...)):
         logger.exception("Prediction failed")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
-    # record activity and stats
     db = _load_db()
     db["activities"].insert(0, {
         "time": datetime.utcnow().isoformat(),
@@ -199,17 +178,7 @@ async def predict(testodm: UploadFile = File(...)):
     })
     _save_db(db)
 
-    # filter and return the fields frontend expects (backward-compatible)
-    filtered_mappings = [
-        {
-            "StudyEventOID": item["StudyEventOID"],
-            "ItemOID": item["ItemOID"],
-            "IMPACTVisitID": item["IMPACTVisitID"],
-        } for item in result
-    ]
-
-    return {"mappings": filtered_mappings}
-
+    return {"mapped": result, "unmapped": unmapped}
 
 @app.post("/validate/")
 async def validate(user_viewmap: UploadFile = File(...)):
@@ -266,10 +235,6 @@ async def save_mappings(
     mappings: list[dict] = Body(...),
     odm_filename: str = None
 ):
-    """
-    Save user-corrected mappings (in memory + knowledge DB). The frontend will
-    POST corrected mappings with the filename of the associated ODM.
-    """
     global corrected_mappings, latest_odm_path
 
     if odm_filename is None:
@@ -282,6 +247,11 @@ async def save_mappings(
     corrected_mappings = mappings
     latest_odm_path = odm_path
 
+    for mapping in mappings:
+        add_user_mapping(mapping)
+
+    # Optionally retrain model with added mappings could be implemented here
+
     db = _load_db()
     db["activities"].insert(0, {
         "time": datetime.utcnow().isoformat(),
@@ -292,7 +262,6 @@ async def save_mappings(
     _save_db(db)
 
     return {"status": "mappings saved"}
-
 
 @app.get("/export_xml/")
 async def export_xml():
@@ -349,8 +318,6 @@ async def knowledge_stats():
         "last_updated": last_updated,
         "models_list": models  # optionally provide list for richer UI
     }
-
-
 @app.get("/recent_activity/")
 async def recent_activity(limit: int = 20):
     db = _load_db()
