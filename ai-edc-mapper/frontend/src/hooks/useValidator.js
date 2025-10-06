@@ -1,7 +1,15 @@
 import { useState } from 'react';
 import { message } from 'antd';
 
-export const useValidator = (apiBase, addActivity, updateKnowledgeStats, setLoading, setError, setStatusMsg) => {
+export const useValidator = (
+  apiBase,
+  addActivity,
+  updateKnowledgeStats,
+  setLoading,
+  setError,
+  setStatusMsg,
+  selectedSponsor
+) => {
   const [userViewmapFile, setUserViewmapFile] = useState(null);
   const [validationResult, setValidationResult] = useState([]);
 
@@ -9,24 +17,33 @@ export const useValidator = (apiBase, addActivity, updateKnowledgeStats, setLoad
     beforeUpload: (file) => { setUserViewmapFile(file); return false; },
     fileList: userViewmapFile ? [userViewmapFile] : [],
     onRemove: () => setUserViewmapFile(null),
-    accept: '.xml'
   };
 
   const handleValidate = async () => {
-    if (!userViewmapFile) return message.error('Upload a ViewMapping file for validation');
-    setLoading(true); setError(null); setValidationResult([]);
-    const form = new FormData(); form.append('user_viewmap', userViewmapFile);
+    if (!userViewmapFile) {
+      message.error('Upload user ViewMapping file for validation');
+      return;
+    }
+    if (!selectedSponsor) {
+      message.error('Select a sponsor');
+      return;
+    }
+    setLoading(true);
+    setError(null);
+    setStatusMsg('Validating...');
     try {
-      const res = await fetch(`${apiBase}/validate/`, { method: 'POST', body: form });
+      const formData = new FormData();
+      formData.append('sponsor', selectedSponsor);
+      formData.append('user_viewmap', userViewmapFile);
+
+      const res = await fetch(`${apiBase}/validate/`, { method: 'POST', body: formData });
       const data = await res.json();
+
       if (!res.ok) throw new Error(data.error || 'Validation failed');
+
       setValidationResult(data.validation || []);
-      addActivity('validate', `Validated ${userViewmapFile.name} (${data.validation?.length ?? 0})`);
-      const wrong = (data.validation || []).filter(r => r.wrongly_mapped).length;
-      const total = (data.validation || []).length || 1;
-      const acc = Math.max(0, Math.round(((total - wrong) / total) * 10000) / 100);
-      updateKnowledgeStats({ accuracy: (prev) => Math.round(((prev.accuracy + acc) / 2) * 100) / 100 });
-      setStatusMsg('Validation complete');
+      setStatusMsg('Validation successful');
+      addActivity('validate', `Validation run for ${selectedSponsor} using ${userViewmapFile.name}`);
     } catch (err) {
       setError(err.message);
       setStatusMsg('Validation error');
@@ -36,28 +53,23 @@ export const useValidator = (apiBase, addActivity, updateKnowledgeStats, setLoad
   };
 
   const clearValidation = () => {
+    setUserViewmapFile(null);
     setValidationResult([]);
-    message.info('Cleared');
+    message.info('Validation cleared');
   };
 
-  const exportUpdatedXml = async () => {
-    try {
-      const resp = await fetch(`${apiBase}/export_xml/`);
-      if (!resp.ok) throw new Error('Export failed');
-      const blob = await resp.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a'); a.href = url; a.download = 'updated_odm.xml'; a.click();
-      URL.revokeObjectURL(url);
-      message.success('Export started');
-    } catch (err) { message.error(err.message); }
+  const exportUpdatedXml = () => {
+    // Implement export functionality; include sponsor param if needed
   };
 
   return {
     userViewmapFile,
     userViewmapProps,
-    validationResult,
     handleValidate,
+    loading: false,
+    error: null,
+    validationResult,
     clearValidation,
-    exportUpdatedXml
+    exportUpdatedXml,
   };
 };

@@ -1,57 +1,53 @@
 import { useState } from 'react';
 import { message } from 'antd';
 
-export const usePredictor = (apiBase, addActivity, updateKnowledgeStats, setLoading, setError, setStatusMsg) => {
+export const usePredictor = (
+  apiBase,
+  addActivity,
+  updateKnowledgeStats,
+  setLoading,
+  setError,
+  setStatusMsg,
+  selectedSponsor
+) => {
   const [testFile, setTestFile] = useState(null);
-  const [predictResult, setPredictResult] = useState([]);
   const [mappedResult, setMappedResult] = useState([]);
+  const [editableMappings, setEditableMappings] = useState([]);
   const [groupedUnmapped, setGroupedUnmapped] = useState([]);
-  const [editableMappingsState, setEditableMappingsState] = useState([]);
-  const [currentOdmFileName, setCurrentOdmFileName] = useState(null);
 
   const testProps = {
     beforeUpload: (file) => { setTestFile(file); return false; },
     fileList: testFile ? [testFile] : [],
     onRemove: () => setTestFile(null),
-    accept: '.xml'
   };
 
   const handlePredict = async () => {
-    if (!testFile) return message.error('Upload a test ODM file');
-    setLoading(true); setError(null);
+    if (!testFile) {
+      message.error('Upload test ODM file for prediction');
+      return;
+    }
+    if (!selectedSponsor) {
+      message.error('Select a sponsor');
+      return;
+    }
+    setLoading(true);
+    setError(null);
+    setStatusMsg('Predicting...');
     try {
-      const form = new FormData();
-      form.append('testodm', testFile);
-      const res = await fetch(`${apiBase}/predict/`, { method: 'POST', body: form });
+      const formData = new FormData();
+      formData.append('sponsor', selectedSponsor);
+      formData.append('testodm', testFile);
+
+      const res = await fetch(`${apiBase}/predict/`, { method: 'POST', body: formData });
       const data = await res.json();
+
       if (!res.ok) throw new Error(data.error || 'Prediction failed');
 
       setMappedResult(data.mapped || []);
-      // Group unmapped by StudyEventOID
-      const groups = {};
-      (data.unmapped || []).forEach(row => {
-        const key = row.StudyEventOID;
-        if (!groups[key]) {
-          groups[key] = {
-            key,
-            StudyEventOID: key,
-            itemOptions: [],
-            itemEdit: '',
-            impactEdit: '',
-            editMode: false,
-            isIgnored: false,
-          };
-        }
-        if (!groups[key].itemOptions.includes(row.ItemOID)) {
-          groups[key].itemOptions.push(row.ItemOID);
-        }
-      });
-      setGroupedUnmapped(Object.values(groups));
-      setEditableMappingsState(data.mapped.map((m, i) => ({ key: i, ...m })));
-      setCurrentOdmFileName(testFile.name);
-      addActivity('predict', `Predicted mappings for ${testFile.name} (${data.mapped.length})`);
-      updateKnowledgeStats({ mappings: (prev) => prev.mappings + (data.mapped.length || 0) });
-      setStatusMsg('Predictions ready');
+      setEditableMappings(data.mapped || []);
+      setGroupedUnmapped(data.unmapped || []);
+      setStatusMsg('Prediction successful');
+      addActivity('predict', `Prediction run for ${selectedSponsor} using ${testFile.name}`);
     } catch (err) {
       setError(err.message);
       setStatusMsg('Prediction error');
@@ -60,75 +56,35 @@ export const usePredictor = (apiBase, addActivity, updateKnowledgeStats, setLoad
     setLoading(false);
   };
 
-  const handleUnmappedEdit = (rowKey, field, value) => {
-    setGroupedUnmapped(prev =>
-      prev.map(row => row.key === rowKey ? { ...row, [field]: value } : row)
-    );
-  };
-
-  const handleActionChange = (rowKey, action) => {
-    setGroupedUnmapped(prev =>
-      prev.map(row =>
-        row.key === rowKey
-          ? action === "Ignore"
-            ? { ...row, isIgnored: true, editMode: false }
-            : { ...row, editMode: true, isIgnored: false }
-          : row
-      )
-    );
-  };
-
+  // Save corrected mappings (optional)
   const saveMappings = async () => {
-    if (!currentOdmFileName) return message.error('No ODM file associated');
-
-    const newUnmappedAdded = groupedUnmapped
-      .filter(r => !r.isIgnored && r.impactEdit && r.itemEdit)
-      .map(r => ({
-        StudyEventOID: r.StudyEventOID,
-        ItemOID: r.itemEdit,
-        IMPACTVisitID: r.impactEdit
-      }));
-
-    const allToSave = [...editableMappingsState, ...newUnmappedAdded];
-
-    setLoading(true); setError(null);
-    try {
-      const resp = await fetch(`${apiBase}/save_mappings/`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mappings: allToSave, odm_filename: currentOdmFileName })
-      });
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data.error || 'Save failed');
-
-      addActivity('save', `Saved mappings for ${currentOdmFileName}`);
-      message.success('Mappings saved');
-    } catch (err) {
-      setError(err.message); message.error(err.message);
-    }
-    setLoading(false);
+    // Implement save logic with sponsor info as needed
   };
 
-  const setEditableMappings = (updater) => {
-    if (typeof updater === 'function') {
-      setEditableMappingsState(updater);
-    } else {
-      setEditableMappingsState(updater);
-    }
+  const handleUnmappedEdit = (key, field, value) => {
+    setGroupedUnmapped(prev =>
+      prev.map(item => item.key === key ? { ...item, [field]: value } : item)
+    );
+  };
+
+  const handleActionChange = (key, value) => {
+    setGroupedUnmapped(prev =>
+      prev.map(item => item.key === key ? { ...item, isIgnored: value === 'Ignore' } : item)
+    );
   };
 
   return {
     testFile,
     testProps,
-    predictResult,
-    mappedResult,
-    groupedUnmapped,
-    editableMappings: editableMappingsState,
-    setEditableMappings,
-    currentOdmFileName,
     handlePredict,
+    error: null,
+    mappedResult,
+    editableMappings,
+    groupedUnmapped,
+    setEditableMappings,
+    saveMappings,
     handleUnmappedEdit,
     handleActionChange,
-    saveMappings
   };
+
 };
