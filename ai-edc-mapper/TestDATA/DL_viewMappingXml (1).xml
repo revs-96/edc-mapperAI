@@ -1,0 +1,419 @@
+<Study xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EDCStudyID="DLABC011" System="DataLabs" IMPACTMonitoringDocCode="10.2.1" IMPACTStudyID="123456" InFormAdapterURL="https://edc-prod.calyx.ai/live_XLK071/ " EDCStudyVersion="xxxxxxx" EDCSiteNameFormat="CTMSSiteReference">
+<VisitDesign>
+<Visit IMPACTVisitID="SCREEN" EDCVisitID="SCREEN" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK0" EDCVisitID="WEEK0" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK4" EDCVisitID="WEEK4" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK6" EDCVisitID="WEEK6" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK8" EDCVisitID="WEEK8" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK12" EDCVisitID="WEEK12" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK14" EDCVisitID="WEEK14" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK16" EDCVisitID="WEEK16" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK20" EDCVisitID="WEEK20" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK22" EDCVisitID="WEEK22" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK24" EDCVisitID="WEEK24" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK28" EDCVisitID="WEEK28" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK32" EDCVisitID="WEEK32" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK36" EDCVisitID="WEEK36" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK40" EDCVisitID="WEEK40" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK44" EDCVisitID="WEEK44" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK48" EDCVisitID="WEEK48" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK52" EDCVisitID="WEEK52" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK56" EDCVisitID="WEEK56" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK60" EDCVisitID="WEEK60" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK64" EDCVisitID="WEEK64" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK68" EDCVisitID="WEEK68" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK72" EDCVisitID="WEEK72" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK76" EDCVisitID="WEEK76" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK80" EDCVisitID="WEEK80" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK84" EDCVisitID="WEEK84" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK88" EDCVisitID="WEEK88" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK92" EDCVisitID="WEEK92" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK96" EDCVisitID="WEEK96" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK100" EDCVisitID="WEEK100" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK104" EDCVisitID="WEEK104" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK108" EDCVisitID="WEEK108" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK112" EDCVisitID="WEEK112" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK116" EDCVisitID="WEEK116" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK120" EDCVisitID="WEEK120" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK124" EDCVisitID="WEEK124" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK128" EDCVisitID="WEEK128" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK132" EDCVisitID="WEEK132" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK136" EDCVisitID="WEEK136" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK140" EDCVisitID="WEEK140" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK144" EDCVisitID="WEEK144" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK148" EDCVisitID="WEEK148" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK152" EDCVisitID="WEEK152" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK156" EDCVisitID="WEEK156" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK160" EDCVisitID="WEEK160" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK164" EDCVisitID="WEEK164" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK168" EDCVisitID="WEEK168" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK172" EDCVisitID="WEEK172" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK176" EDCVisitID="WEEK176" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK180" EDCVisitID="WEEK180" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="WEEK184" EDCVisitID="WEEK184" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="EOT" EDCVisitID="EOT" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COELIG" EDCVisitID="COELIG" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK0" EDCVisitID="COWEEK0" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK4" EDCVisitID="COWEEK4" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK6" EDCVisitID="COWEEK6" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK8" EDCVisitID="COWEEK8" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK12" EDCVisitID="COWEEK12" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK14" EDCVisitID="COWEEK14" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK16" EDCVisitID="COWEEK16" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK20" EDCVisitID="COWEEK20" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK22" EDCVisitID="COWEEK22" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK24" EDCVisitID="COWEEK24" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK28" EDCVisitID="COWEEK28" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COWK32" EDCVisitID="COWEEK32" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETELIG" EDCVisitID="RETELIG" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK0" EDCVisitID="RETWEEK0" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK4" EDCVisitID="RETWEEK4" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK6" EDCVisitID="RETWEEK6" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK8" EDCVisitID="RETWEEK8" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK12" EDCVisitID="RETWEEK12" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK14" EDCVisitID="RETWEEK14" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK16" EDCVisitID="RETWEEK16" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK20" EDCVisitID="RETWEEK20" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK22" EDCVisitID="RETWEEK22" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK24" EDCVisitID="RETWEEK24" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK28" EDCVisitID="RETWEEK28" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK32" EDCVisitID="RETWEEK32" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK36" EDCVisitID="RETWEEK36" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK40" EDCVisitID="RETWEEK40" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK44" EDCVisitID="RETWEEK44" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK48" EDCVisitID="RETWEEK48" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK52" EDCVisitID="RETWEEK52" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK60" EDCVisitID="RETWEEK60" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK72" EDCVisitID="RETWEEK72" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK84" EDCVisitID="RETWEEK84" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK96" EDCVisitID="RETWEEK96" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK108" EDCVisitID="RETWEEK108" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK120" EDCVisitID="RETWEEK120" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETWK132" EDCVisitID="RETWEEK132" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="RETEOT" EDCVisitID="RETEOT" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="COEOT" EDCVisitID="COEOT" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP1" EDCVisitID="FUP1" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP2" EDCVisitID="FUP2" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP3" EDCVisitID="FUP3" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP4" EDCVisitID="FUP4" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP5" EDCVisitID="FUP5" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="FUP6" EDCVisitID="FUP6" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="EOS" EDCVisitID="EOS" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="UNS" EDCVisitID="Unscheduled" Repeating="Y">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="DUMENR" EDCVisitID="WEEK0" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+<Visit IMPACTVisitID="DUMEOS" EDCVisitID="EOS" Repeating="N">
+<Attribute IMPACTAttributeID="ActualVisitDate" EDCAttributeID="ActualDate"/>
+</Visit>
+</VisitDesign>
+<SubjectAttributes>
+<Attribute IMPACTAttributeID="UniqueNumber" EDCVisitID="Common Patient Visit" EDCAttributeID="PatientScreeningID"/>
+<Attribute IMPACTAttributeID="TransferSubjectTriggerField" EDCVisitID="Common Patient Visit" EDCAttributeID="PatientScreeningID"/>
+<Attribute IMPACTAttributeID="RandomizationNumber" EDCVisitID="Common Patient Visit" EDCAttributeID="RandomizationNo"/>
+<Attribute IMPACTAttributeID="RandomizationDate" EDCVisitID="Common Patient Visit" EDCAttributeID="RandomizationDate"/>
+<Attribute IMPACTAttributeID="ICFDate" EDCVisitID="Common Patient Visit" EDCAttributeID="InformedConsentDate"/>
+<Attribute IMPACTAttributeID="StudyWithdrawalDate" EDCVisitID="Common Patient Visit" EDCAttributeID="StudyWithdrawalDate"/>
+<Attribute IMPACTAttributeID="StudyWithdrawalDesc" EDCVisitID="Common Patient Visit" EDCAttributeID="StudyWithdrawalDesc"/>
+<Attribute IMPACTAttributeID="StudyWithdrawalReason" EDCVisitID="Common Patient Visit" EDCAttributeID="StudyWithdrawalReason">
+<Value>
+<IMPACTValue>aesae__c</IMPACTValue>
+<EDCValue>ADVERSE EVENT</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>death__c</IMPACTValue>
+<EDCValue>DEATH</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>lost_to_followup__c</IMPACTValue>
+<EDCValue>LOST TO FOLLOW-UP</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>other__c</IMPACTValue>
+<EDCValue>OTHER</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>investigator_decision__c</IMPACTValue>
+<EDCValue>PHYSICIAN DECISION</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>eligibility_violation__c</IMPACTValue>
+<EDCValue>PROTOCOL DEVIATION</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>screening_failure__c</IMPACTValue>
+<EDCValue>INCLUSION/EXCLUSION CRITERIA NOT MET</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>sponsor_decision__c</IMPACTValue>
+<EDCValue>STUDY TERMINATED BY SPONSOR</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>withdrawn_consent__c</IMPACTValue>
+<EDCValue>WITHDRAWAL BY PARENT/GUARDIAN</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>withdrawn_consent__c</IMPACTValue>
+<EDCValue>WITHDRAWAL BY SUBJECT</EDCValue>
+</Value>
+</Attribute>
+</SubjectAttributes>
+<SAEAttributes>
+<Attribute IMPACTAttributeID="Description" EDCVisitID="SAE Visit" EDCAttributeID="SAEDescription"/>
+<Attribute IMPACTAttributeID="SubjectWithdrawnDueToEvent" EDCVisitID="SAE Visit" EDCAttributeID="SubjectWithdrawnDueToEvent"> </Attribute>
+<Attribute IMPACTAttributeID="OnsetDate" EDCVisitID="SAE Visit" EDCAttributeID="SAEOnsetDate"/>
+<Attribute IMPACTAttributeID="ResolvedDate" EDCVisitID="SAE Visit" EDCAttributeID="SAEResolvedDate"/>
+<Attribute IMPACTAttributeID="Outcome" EDCVisitID="SAE Visit" EDCAttributeID="SAEOutcome">
+<Value>
+<IMPACTValue>ON</IMPACTValue>
+<EDCValue>NOT RECOVERED/NOT RESOLVED</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>ON</IMPACTValue>
+<EDCValue>RECOVERING/RESOLVING</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>ON</IMPACTValue>
+<EDCValue>UNKNOWN</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>RS</IMPACTValue>
+<EDCValue>RECOVERED/RESOLVED</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>RS</IMPACTValue>
+<EDCValue>RECOVERED/RESOLVED WITH SEQUELAE</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>RS</IMPACTValue>
+<EDCValue>FATAL</EDCValue>
+</Value>
+</Attribute>
+<Attribute IMPACTAttributeID="OutcomeDetail" EDCVisitID="SAE Visit" EDCAttributeID="SAEOutcomeDetail">
+<Value>
+<IMPACTValue>DE</IMPACTValue>
+<EDCValue>FATAL</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>RE</IMPACTValue>
+<EDCValue>RECOVERED/RESOLVED</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>RS</IMPACTValue>
+<EDCValue>RECOVERED/RESOLVED WITH SEQUELAE</EDCValue>
+</Value>
+</Attribute>
+<Attribute IMPACTAttributeID="IRBNotifiedDate" EDCVisitID="SAE Visit" EDCAttributeID="IRBNotifiedDate"/>
+<Attribute IMPACTAttributeID="ParexelNotifiedDate" EDCVisitID="SAE Visit" EDCAttributeID="CompanyNotifiedDate"/>
+<Attribute IMPACTAttributeID="SeriousEventFlag" EDCVisitID="SAE Visit" EDCAttributeID="SAESeriousEventFlag">
+<Value>
+<IMPACTValue>Y</IMPACTValue>
+<EDCValue>Y</EDCValue>
+</Value>
+<Value>
+<IMPACTValue>N</IMPACTValue>
+<EDCValue>N</EDCValue>
+</Value>
+</Attribute>
+</SAEAttributes>
+</Study>
